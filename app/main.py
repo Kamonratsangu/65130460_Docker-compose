@@ -3,7 +3,17 @@ from pydantic import BaseModel
 from typing import Optional
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+title="Kamonrat App",
+description="",
+version="0.0.1",
+terms_of_service="http://ant.dpu.ac.th/",
+contact={
+    "name": "65130640 กมลรัชต์ สงวนหมู่",
+    "url": "http://ant.dpu.ac.th/",
+    "email": "65130460@dpu.ac.th",
+},
+)
 
 class Param(BaseModel):
     weight: Optional[int] = None
